@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPL 2026</title>
+    <link rel="icon" type="image/png" href="ipl.logoo.png">
+    <style>
+        * {
+        margin: 0;
+         padding: 0;
+          box-sizing: border-box;
+           font-family: Arial, sans-serif;
+            }
+        body {
+            background-image: url("background.webp");
+            background-repeat: no-repeat;
+            background-size: cover;    
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0a1f44;
+            padding: 30px 40px;
+            color: white;
+        }
+        .logo { 
+          font-size: 24px;
+           font-weight: bold;
+           }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: white; }
+        .hero { height: 90vh; display: flex; justify-content: center; align-items: center; text-align: center; color: white; }
+        .hero-content { background: rgba(18, 52, 224, 0.7); padding: 40px; border-radius: 10px; }
+        .hero h1 { font-size: 50px; }
+        .hero p { margin: 15px 0; font-size: 20px; }
+        .btn { display: inline-block; padding: 10px 25px; background: #ffc107; color: black; text-decoration: none; border-radius: 25px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: white; }
+        .teams { padding: 60px 20px; text-align: center; }
+        .teams h2 { margin-bottom: 30px; font-size: 32px; color: white; }
+        .team-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; }
+        .team-card {
+            background: white;
+            padding: 20px;
+            width: 220px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .team-card img { width: 100px; height: 100px; }
+        .team-card:hover { transform: translateY(-10px); }
+        .schedule { background: #0a1f44; color: white; padding: 60px 20px; text-align: center; }
+        .schedule h2 { margin-bottom: 30px; }
+        .match { background: #1c3c78; margin: 10px auto; padding: 15px; width: 60%; border-radius: 8px; display: flex; justify-content: space-between; }
+        .points-table { padding: 60px 20px; text-align: center; }
+        .points-table h2 { margin-bottom: 25px; font-size: 32px; color: white; }
+        .points-table table { margin: auto; border-collapse: collapse; width: 70%; background: white; border-radius: 10px; overflow: hidden; color: black; }
+        .points-table th, .points-table td { padding: 12px; border: 1px solid black; }
+        .points-table th { background: #0a1f44; color: white; }
+        .points-table tr:nth-child(even) { background:white; color: black; }
+        .points-table tr:hover { background: #e6ecff; }
+        .contact { padding: 50px; text-align: center; }
+        footer { background: #0a1f44; color: white; padding: 15px; text-align: center; }
+        .ipl-banner {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    padding-bottom: 5%;     
+}
+
+.ipl-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ipl-content h2 {
+    margin: 0;
+    color: white; 
+    font-size: 28px;
+}
+
+.ipl-content img {
+    height: 50px;
+}
+        @media (max-width: 768px) {
+            .team-container { flex-direction: column; align-items: center; }
+            .match { width: 90%; }
+            .hero h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">IPL 2026</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#teams">Teams</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#pointstable">Points Table</a>
+            <a href="stats.html">Stats</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="ipl-banner">
+    <div class="ipl-content">
+      <img src="ipl.logoo.png" alt="IPL Logo">
+        
+        <h2>INDIAN PREMIER LEAGUE</h2>
+    </div>
+</div>
+<center>
+<iframe width="700" height="370" src="videoplayback.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to IPL 2026</h1>
+            <p>Experience the thrill of the biggest T20 cricket league in the world!</p>
+            <a href="#teams" class="btn">Explore Teams</a>
+        </div>
+    </section>
+
+    <section class="teams" id="teams">
+        <h2>Teams</h2>
+        <input type="text" id="searchInput" placeholder="Search Teams..." style="margin-bottom:20px; padding:8px; width:200px; border-radius:5px;">
+        <div class="team-container">
+            <div class="team-card" data-team="Mumbai Indians">
+                <img src="mi.logo.png" alt="MI">
+                <h3>Mumbai Indians</h3>
+            </div>
+            <div class="team-card" data-team="Chennai Super Kings">
+                <img src="csk.logo.png" alt="CSK">
+                <h3>Chennai Super Kings</h3>
+            </div>
+            <div class="team-card" data-team="Royal Challengers Bangalore">
+                <img src="rcb.logo.jpg" alt="RCB">
+                <h3>Royal Challengers Bangalore</h3>
+            </div>
+            <div class="team-card" data-team="Kolkata Knight Riders">
+                <img src="kkr.logo.jpg" alt="KKR">
+                <h3>Kolkata Knight Riders</h3>
+            </div>
+            <div class="team-card" data-team="Sunrisers Hyderabad">
+                <img src="srh.logo.svg" alt="SRH">
+                <h3>Sunrisers Hyderabad</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule" id="schedule">
+        <h2>Upcoming Matches</h2>
+        <div class="match">
+            <p>MI vs CSK</p>
+            <span>14 March 2026</span>
+        </div>
+        <div class="match">
+            <p>RCB vs KKR</p>
+            <span>15 March 2026</span>
+        </div>
+        <div class="match">
+            <p>CSK vs RCB</p>
+            <span>16 March 2026</span>
+        </div>
+    </section>
+
+    <section class="points-table" id="pointstable">
+        <h2>IPL 2026 Points Table</h2>
+        <table>
+            <tr>
+                <th>Position</th>
+                <th>Team</th>
+                <th>Matches</th>
+                <th>Wins</th>
+                <th>Loss</th>
+                <th>Points</th>
+                <th>NRR</th>
+            </tr>
+            <tr><td>1</td><td>Sunrisers Hyderabad</td><td>5</td><td>4</td><td>1</td><td>8</td><td>+1.45</td></tr>
+            <tr><td>2</td><td>Chennai Super Kings</td><td>5</td><td>3</td><td>2</td><td>6</td><td>+0.90</td></tr>
+            <tr><td>3</td><td>Royal Challengers Bangalore</td><td>5</td><td>3</td><td>2</td><td>6</td><td>+0.55</td></tr>
+            <tr><td>4</td><td>Kolkata Knight Riders</td><td>5</td><td>2</td><td>3</td><td>4</td><td>-0.10</td></tr>
+            <tr><td>5</td><td>Mumbai Indians</td><td>5</td><td>1</td><td>4</td><td>2</td><td>-1.20</td></tr>
+        </table>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: ipl2026@fansite.com</p>
+    </section>
+
+    <footer>
+        <p>© 2026 IPL Fan Page | Designed for Student Project</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll(".team-card").forEach(function(team){
+            team.addEventListener("click", function(){
+                let teamName = this.getAttribute("data-team");
+                if(teamName){
+                    alert("You clicked: " + teamName);
+                }
+            });
+        });
+
+        document.getElementById("searchInput").addEventListener("keyup", function(){
+            let value = this.value.toLowerCase();
+            document.querySelectorAll(".team-card").forEach(function(team){
+                let name = team.getAttribute("data-team");
+                if(name && name.toLowerCase().includes(value)){
+                    team.style.display = "block";
+                } else {
+                    team.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

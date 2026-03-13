@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>project</title>
+        <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+    flex: 1;
+    padding: 40px;
+}
+
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+}
+.projects{
+    margin-top:60px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.project-card{
+    text-decoration:none;
+    color:#333;
+    font-size:20px;
+    background:white;
+    padding:25px 40px;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow:0 12px 25px rgba(0,0,0,0.3);
+    background:#f5f5f5;
+}
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; 
+}
+
+.project-desc {
+    max-width: 300px;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+}
+footer {
+    background-color: #0f6d75;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+}
+</style>
+    </head>
+    <body>
+        <div class="container">
+    <h1>My Projects</h1><br><br>
+    <div class="projects">
+        <div class="project-item">
+  <a href="myportfolio.html" class="project-card">
+    Student Portfolio Website
+  </a>
+   <p class="project-desc">A personal portfolio showcasing my skills, projects, and resume in a clean, responsive design.</p>
+  </div>
+ 
+  
+<div class="project-item">
+  <a href="restaurant.html" class="project-card">
+    Simple Restaurant Webpage
+  </a>
+ <p class="project-desc">A static website for a restaurant with menu and reservation sections.</p>
+  </div>
+  <div class="project-item">
+  <a href="IPLWebsite.html" class="project-card">
+    IPL Website
+  </a>
+  <p class="project-desc">A website presenting IPL teams, schedules, and live scores in an interactive layout.</p>
+  </div>
+
+</div>
+</div>
+
+<footer>
+    © 2026 My Portfolio
+</footer>
+        
+    </body>
+</html>

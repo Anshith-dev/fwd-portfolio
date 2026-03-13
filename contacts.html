@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contacts</title>
+         <style>
+        body {
+            font-family: Arial, sans-serif;
+             background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: whitesmoke;
+            padding: 20px;
+            width: 300px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+        footer {
+    background-color: rgb(11, 117, 131);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+    </style>
+    </head>
+    <body>
+        
+        
+        <h1>Contact Me</h1>
+        <fieldset>
+        <legend><p>Get in Touch</p></legend>
+        <form>
+            
+            <label for="name">Name</label><br>
+            <input type="text" placeholder="Enter your name" required><br>
+            <label for="email">Email</label><br>
+            <input form="email" placeholder="Enter your email" required><br>
+            <label>Message</label><br>
+            <textarea  required rows="5" cols="18" placeholder="Enter your message"> </textarea><br><br>
+             <button type="submit">Send Message</button>
+        </form>
+        
+       
+      <div class="contact-info">
+        <p><strong>Email:</strong> rishi@example.com</p>
+        <p><strong>Phone:</strong> 9876543210</p>
+        
+    </div>
+    </fieldset>
+     
+    <footer>© 2026 My Portfolio</footer>
+   
+
+     
+    </body>
+</html>
